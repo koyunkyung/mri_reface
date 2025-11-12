@@ -272,7 +272,7 @@ python3 dcm_nii_reface.py \
 프로그램이 성공적으로 실행되면 다음과 같은 구조로 결과물이 생성됩니다:
 ```
 deface_results/
-├── PatientID_001/
+├── PatientID_001_MRI_DATE/
 │   ├── original/                          # 원본 파일
 │   │   ├── PatientID_001_1_T1_MPRAGE.nii.gz
 │   │   ├── PatientID_001_2_T2_FLAIR.nii.gz
@@ -280,7 +280,7 @@ deface_results/
 │   └── defaced/                           # 익명화된 파일
 │       ├── PatientID_001_1_T1_MPRAGE_defaced.nii.gz
 │       └── PatientID_001_2_T2_FLAIR_defaced.nii.gz
-├── PatientID_002/
+├── PatientID_002_MRI_DATE/
 │   ├── original/
 │   └── defaced/
 └── ...
