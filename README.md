@@ -15,20 +15,12 @@ NIfTI 파일 변환 결과를 별도 프로그램 없이 VSCode에서 직접 확
 4. **NiiVue** (by Korbinian Eckstein) 설치
 5. 설치 후 `.nii` 또는 `.nii.gz` 파일을 클릭하면 뇌 영상을 3D로 바로 확인 가능
 
-#### Windows 사용자
 
 명령 프롬프트 또는 PowerShell에서 실행:
 > VSCode에서 실행 중이라면 상단 탭에서 'Terminal(터미널)' 탭을 클릭하고 'New Terminal(새로운 터미널)'을 다시 클릭하면 뜨는 창에서 실행
 
 ```cmd
 pip install pydicom dicom2nifti pandas numpy
-```
-
-<details>
-<summary><b>Mac/Linux 사용자</b></summary>
-
-```bash
-pip3 install pydicom dicom2nifti pandas numpy
 ```
 
 </details>
@@ -118,7 +110,7 @@ docker pull poldracklab/pydeface
 
 > **참고**: 약 500MB~1GB 다운로드가 필요하며, 인터넷 속도에 따라 몇 분 소요됩니다.
 
-#### 3-2단계:
+#### 3-2단계: Docker 이미지를 로드합니다
 
 #### Windows 사용자
 
@@ -162,7 +154,7 @@ ls -la ~/project/mri_reface_docker
 
 </details>
 
-Docker 이미지 로드
+
 #### Windows (PowerShell/명령프롬프트)
 ```cmd
 cd C:\Users\YourName\Documents\mri_reface_docker
