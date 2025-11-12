@@ -18,7 +18,7 @@ NIfTI 파일 변환 결과를 별도 프로그램 없이 VSCode에서 직접 확
 #### Windows 사용자
 
 명령 프롬프트 또는 PowerShell에서 실행:
-> VSCode에서 실행 중이라면 상단 탭에서 'Terminal' 탭을 클릭하고 'New Terminal'을 다시 클릭하면 뜨는 창에서 실행
+> VSCode에서 실행 중이라면 상단 탭에서 'Terminal(터미널)' 탭을 클릭하고 'New Terminal(새로운 터미널)'을 다시 클릭하면 뜨는 창에서 실행
 
 ```cmd
 pip install pydicom dicom2nifti pandas numpy
@@ -292,6 +292,20 @@ deface_results/
 │   ├── original/
 │   └── defaced/
 └── ...
+
+raw_preprocessed/
+├─ HP-00604_MRI_20200401/
+│  ├─ 3D_FLAIR_2MM_{COR,TRA}
+│  ├─ 3D_FLAIR_SAG
+│  ├─ 3D_T1_TFE_{2MM_COR,2MM_TRA,SAG}
+│  ├─ mIP_T2star
+│  ├─ Nigrosome_ON
+│  ├─ ssT2star_AX
+│  ├─ SURVEY
+│  └─ T2_TSE_AX
+├─ {HP-00632_MRI_20190321,...}/
+└─ ...
+
 ```
 ---
 
