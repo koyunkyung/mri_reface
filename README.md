@@ -29,6 +29,7 @@ pip install pydicom dicom2nifti pandas numpy
 
 <details>
 <summary><b>Mac/Linux 사용자</b></summary>
+
 ```bash
 pip3 install pydicom dicom2nifti pandas numpy
 ```
@@ -111,7 +112,7 @@ docker --version
 
 #### 3단계: MRI Reface Docker 다운로드 및 설정 가이드
 
-Docker가 실행 중인 상태에서 다음 명령어를 실행합니다:
+#### 3-1단계: Docker가 실행 중인 상태에서 다음 명령어를 실행합니다
 
 ```cmd
 docker pull poldracklab/pydeface
@@ -119,8 +120,68 @@ docker pull poldracklab/pydeface
 
 > 📌 **참고**: 약 500MB~1GB 다운로드가 필요하며, 인터넷 속도에 따라 몇 분 소요됩니다.
 
+#### 3-2단계:
 
+#### Windows 사용자
 
+[NITRC MRI Reface 페이지](https://www.nitrc.org/frs/?group_id=1525) → 최신 릴리즈의 mri_reface_docker.tar.gz 다운로드
+
+7-Zip으로 tar.gz → tar 순서로 풀기 → 예: 
+
+```cmd
+C:\Users\YourName\Documents\mri_reface_docker\
+```
+
+폴더 내용 예시
+```
+mri_reface_docker/
+├─ mri_reface_docker_image
+└─ run_mri_reface_docker.sh   ← 중요
+```
+
+<details>
+<summary><b>Mac 사용자</b></summary>
+
+```bash
+cd ~/Downloads
+tar -xzf mri_reface_docker.tar.gz
+mv mri_reface_docker ~/Documents/
+ls -la ~/Documents/mri_reface_docker
+```
+</details>
+
+<details>
+<summary><b>Linux 사용자 (Ubuntu/Debian 기준)</b></summary>
+
+```bash
+cd ~/Downloads
+# URL은 NITRC 페이지에서 복사
+wget https://www.nitrc.org/frs/download.php/xxxxx/mri_reface_docker.tar.gz
+tar -xzf mri_reface_docker.tar.gz
+mv mri_reface_docker ~/project/
+ls -la ~/project/mri_reface_docker
+```
+
+</details>
+
+Docker 이미지 로드
+#### Windows (PowerShell/명령프롬프트)
+```cmd
+cd C:\Users\YourName\Documents\mri_reface_docker
+docker load -i mri_reface_docker_image
+docker images
+```
+
+<details>
+<summary><b>Mac/Linux 사용자</b></summary>
+
+```bash
+cd ~/Documents/mri_reface_docker   # 또는 본인 경로
+docker load -i mri_reface_docker_image
+docker images
+```
+
+</details>
 
 ### ✌🏻 실행 방법
 
