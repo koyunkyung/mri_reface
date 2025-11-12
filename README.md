@@ -1,8 +1,5 @@
-# DICOM to NIfTI Defacing Pipeline
-의료 영상 데이터(DICOM)를 NIfTI 형식으로 변환하고 얼굴 정보를 익명화하는 자동화 파이프라인입니다.
----
 
-## 🎯 사전 준비사항
+### 🎯 사전 준비사항
 ### 1단계: Docker 설치 및 실행
 
 #### Windows 사용자
@@ -19,7 +16,7 @@ docker --version
 ```
 
 <details>
-<summary><b>Mac 사용자 (클릭하여 펼치기)</b></summary>
+<summary><b>Mac 사용자</b></summary>
 
 1. [Docker Desktop for Mac](https://www.docker.com/products/docker-desktop/) 다운로드
 2. Mac 칩 종류에 맞는 버전 선택:
@@ -37,7 +34,7 @@ docker --version
 </details>
 
 <details>
-<summary><b>Linux 사용자 (Ubuntu/Debian 기준) (클릭하여 펼치기)</b></summary>
+<summary><b>Linux 사용자 (Ubuntu/Debian 기준)</b></summary>
 ```bash
 # 시스템 패키지 업데이트
 sudo apt-get update
@@ -97,7 +94,7 @@ python --version
 ```
 
 <details>
-<summary><b>Mac 사용자 (클릭하여 펼치기)</b></summary>
+<summary><b>Mac 사용자</b></summary>
 
 **Homebrew 사용 (권장):**
 ```bash
@@ -120,7 +117,7 @@ python3 --version
 </details>
 
 <details>
-<summary><b>Linux 사용자 (클릭하여 펼치기)</b></summary>
+<summary><b>Linux 사용자</b></summary>
 ```bash
 sudo apt-get update
 sudo apt-get install -y python3 python3-pip python3-venv
@@ -144,7 +141,7 @@ pip install pydicom dicom2nifti pandas numpy
 ```
 
 <details>
-<summary><b>Mac/Linux 사용자 (클릭하여 펼치기)</b></summary>
+<summary><b>Mac/Linux 사용자</b></summary>
 ```bash
 pip3 install pydicom dicom2nifti pandas numpy
 ```
