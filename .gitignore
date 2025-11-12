@@ -1,6 +1,8 @@
-# 대용량 원본 데이터 경로
+# 대용량 원본 데이터 경로 무시
 /raw/
-/raw/**
+/raw_preprocessed/
+/mri_reface_docker/
+/deface_results/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
