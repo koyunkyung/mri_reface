@@ -286,7 +286,7 @@ deface_results/
 └── ...
 
 raw_preprocessed/
-├─ HP-00604_MRI_20200401/
+├─ PatientID_001_MRI_DATE/
 │  ├─ 3D_FLAIR_2MM_{COR,TRA}
 │  ├─ 3D_FLAIR_SAG
 │  ├─ 3D_T1_TFE_{2MM_COR,2MM_TRA,SAG}
@@ -295,7 +295,7 @@ raw_preprocessed/
 │  ├─ ssT2star_AX
 │  ├─ SURVEY
 │  └─ T2_TSE_AX
-├─ {HP-00632_MRI_20190321,...}/
+├─ PatientID_002_MRI_DATE/
 └─ ...
 
 ```
