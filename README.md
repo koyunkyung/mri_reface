@@ -6,9 +6,9 @@
 ---
 
 
-### ☝🏻 사전 준비사항
+## ☝🏻 사전 준비사항
 
-#### 1단계: Python 패키지 및 VSCode Extension 설치
+### 1단계: Python 패키지 및 VSCode Extension 설치
 
 NIfTI 파일 변환 결과를 직접 확인하고 싶다면:
 1. **VSCode 열기**
@@ -36,7 +36,8 @@ pip3 install pydicom dicom2nifti pandas numpy
 
 </details>
 
-#### 2단계: Docker 설치 및 실행
+
+### 2단계: Docker 설치 및 실행
 
 #### Windows 사용자
 
@@ -110,7 +111,7 @@ docker --version
 
 ---
 
-#### 3단계: MRI Reface Docker 다운로드 및 설정 가이드
+### 3단계: MRI Reface Docker 다운로드 및 설정 가이드
 
 #### 3-1단계: Docker가 실행 중인 상태에서 다음 명령어를 실행합니다
 
@@ -118,15 +119,15 @@ docker --version
 docker pull poldracklab/pydeface
 ```
 
-> 📌 **참고**: 약 500MB~1GB 다운로드가 필요하며, 인터넷 속도에 따라 몇 분 소요됩니다.
+> **참고**: 약 500MB~1GB 다운로드가 필요하며, 인터넷 속도에 따라 몇 분 소요됩니다.
 
 #### 3-2단계:
 
 #### Windows 사용자
 
-[NITRC MRI Reface 페이지](https://www.nitrc.org/frs/?group_id=1525) → 최신 릴리즈의 mri_reface_docker.tar.gz 다운로드
+[NITRC MRI Reface 페이지](https://www.nitrc.org/frs/?group_id=1525) → 최신 릴리즈의 `mri_reface_docker.tar.gz` 다운로드
 
-7-Zip으로 tar.gz → tar 순서로 풀기 → 예: 
+7-Zip으로 `tar.gz` → tar 순서로 풀기 → 예: 
 
 ```cmd
 C:\Users\YourName\Documents\mri_reface_docker\
@@ -183,9 +184,15 @@ docker images
 
 </details>
 
-### ✌🏻 실행 방법
+---
+
+## ✌🏻 실행 방법
+
+
 
 #### Windows 사용자
+
+`dcm_nii_reface.py` 파일을 원하는 경로로 다운로드 받아 아래의 단계에 따라 순차적으로 진행하면 됩니다. 파일을 클릭하여 오른쪽 상단에 있는 다운로드 버튼을 누르면 다운로드가 시작됩니다.
 
 1. **명령 프롬프트** 또는 **PowerShell**을 열기
 2. 스크립트가 있는 폴더로 이동:
@@ -258,7 +265,6 @@ python3 dcm_nii_reface.py \
 
 </details>
 
----
 
 #### 📝 명령어 옵션 설명
 
@@ -290,7 +296,7 @@ deface_results/
 │   └── defaced/
 └── ...
 ```
-
+---
 
 ### 🤯 문제 해결
 
@@ -303,7 +309,6 @@ deface_results/
 - 컴퓨터 재시작 후 다시 시도
 - Docker 재설치
 
----
 
 #### ❌ "Permission denied" 오류
 
@@ -314,13 +319,13 @@ deface_results/
 chmod +x /path/to/run_mri_reface_docker.sh
 ```
 
----
 
 #### ❌ "ModuleNotFoundError" 오류
 
 **원인**: 필요한 Python 패키지가 설치되지 않음
 
 **해결 방법**:
+
 ```cmd
 # Windows
 pip install pydicom dicom2nifti pandas numpy
@@ -329,7 +334,6 @@ pip install pydicom dicom2nifti pandas numpy
 pip3 install pydicom dicom2nifti pandas numpy
 ```
 
----
 
 #### ❌ Docker 이미지 다운로드 실패
 
