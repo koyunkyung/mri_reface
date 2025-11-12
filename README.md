@@ -3,20 +3,17 @@
 - [결과물 및 폴더 구조](#결과물-및-폴더-구조)
 - [문제 해결](#문제-해결)
 
----
-
 
 ## ☝🏻 사전 준비사항
 
 ### 1단계: Python 패키지 및 VSCode Extension 설치
 
-NIfTI 파일 변환 결과를 직접 확인하고 싶다면:
+NIfTI 파일 변환 결과를 별도 프로그램 없이 VSCode에서 직접 확인하고 싶다면:
 1. **VSCode 열기**
 2. 왼쪽 사이드바에서 **Extensions** 아이콘 클릭 (또는 `Ctrl+Shift+X`)
 3. 검색창에 **"NiiVue"** 입력
 4. **NiiVue** (by Korbinian Eckstein) 설치
 5. 설치 후 `.nii` 또는 `.nii.gz` 파일을 클릭하면 뇌 영상을 3D로 바로 확인 가능
-> 💡 **팁**: NiiVue를 설치하면 변환된 NIfTI 파일을 별도 프로그램 없이 VSCode에서 바로 시각화할 수 있습니다!
 
 #### Windows 사용자
 
