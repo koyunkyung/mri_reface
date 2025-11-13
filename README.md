@@ -144,7 +144,7 @@ docker pull poldracklab/pydeface
    docker images
 ```
 
-6. **스크립트 경로 복사** (나중에 사용):
+6. **스크립트 경로 복사** (나중에 파이썬 코드 실행 시 사용될 예정입니다):
    - `mri_reface_docker` 폴더를 파일 탐색기에서 열기
    - **상단 주소창 클릭** → 경로 자동 선택됨 → `Ctrl+C`로 복사
    - 메모장에 붙여넣기: `C:\Users\YourName\Documents\mri_reface_docker\run_mri_reface_docker.sh`
