@@ -8,6 +8,8 @@
 
 ### 1단계: Python 패키지 및 VSCode Extension 설치
 
+#### VsCode Extension: NiiVue
+
 NIfTI 파일 변환 결과를 별도 프로그램 없이 VSCode에서 직접 확인하고 싶다면:
 1. **VSCode 열기**
 2. 왼쪽 사이드바에서 **Extensions** 아이콘 클릭 (또는 `Ctrl+Shift+X`)
@@ -15,9 +17,14 @@ NIfTI 파일 변환 결과를 별도 프로그램 없이 VSCode에서 직접 확
 4. **NiiVue** (by Korbinian Eckstein) 설치
 5. 설치 후 `.nii` 또는 `.nii.gz` 파일을 클릭하면 뇌 영상을 3D로 바로 확인 가능
 
+#### Python 및 Python 패키지 설치
+1. [Python 공식 웹사이트](https://www.python.org/downloads/)에서 최신 버전 다운로드
+2. 설치 파일 실행 시 **"Add Python to PATH" 체크박스 반드시 선택** 
+3. "Install Now" 클릭
 
-명령 프롬프트 또는 PowerShell에서 실행:
+4. 명령 프롬프트 또는 PowerShell에서 실행:
 > VSCode에서 실행 중이라면 상단 탭에서 'Terminal(터미널)' 탭을 클릭하고 'New Terminal(새로운 터미널)'을 다시 클릭하면 뜨는 창에서 실행
+> `pip install` 명령어가 작동하지 않을 경우 python 설치시 Add Python to PATH 클릭 후 설치했는지 다시 한번 확인
 
 ```cmd
 pip install pydicom dicom2nifti pandas numpy
@@ -30,11 +37,13 @@ pip install pydicom dicom2nifti pandas numpy
 
 #### Windows 사용자
 
-1. [Docker Desktop for Windows](https://www.docker.com/products/docker-desktop/) 다운로드
+1. [Docker Desktop for Windows](https://www.docker.com/products/docker-desktop/) 다운로드 - **AMD64 버전** 선택하여 다운로드
 2. 설치 파일(`Docker Desktop Installer.exe`) 실행
-3. 설치 완료 후 **컴퓨터 재시작**
+3. 설치 완료 후 컴퓨터 재시작
 4. Docker Desktop 실행 (시작 메뉴에서 검색)
-5. 시스템 트레이에 고래 아이콘이 나타나면 성공
+5. 초기 설정 단계 완료 (Tutorial 건너뛰기 가능)
+6. 시스템 트레이에 **고래 아이콘**이 나타나면 성공 
+
 
 **설치 확인:**
 ```cmd
@@ -112,22 +121,34 @@ docker pull poldracklab/pydeface
 
 #### 3-2단계: Docker 이미지를 로드합니다
 
-#### Windows 사용자
+##### Windows 사용자
 
-[NITRC MRI Reface 페이지](https://www.nitrc.org/frs/?group_id=1525) → 최신 릴리즈의 `mri_reface_docker.tar.gz` 다운로드
+1. [NITRC MRI Reface 페이지](https://www.nitrc.org/frs/?group_id=1525) 접속
+2. 최신 릴리즈의 **`mri_reface_docker.tar.gz`** 다운로드
+   - Windows에서는 자동으로 **`.zip`** 파일로 다운로드됩니다
+3. **압축 해제**:
+   - 다운로드한 `.zip` 파일 우클릭 → "압축 풀기" 또는 "Extract All"
+   - 압축을 풀 위치 선택 (예: `C:\Users\YourName\Documents`)
 
-7-Zip으로 `tar.gz` → tar 순서로 풀기 → 예: 
+4. **결과 폴더 예시:**
+```
+   C:\Users\YourName\Documents\mri_reface_docker\
+   ├── mri_reface_docker_image
+   └── run_mri_reface_docker.sh   ← 중요!
+```
 
+5. **Docker 이미지 로드:**
 ```cmd
-C:\Users\YourName\Documents\mri_reface_docker\
+   cd C:\Users\YourName\Documents\mri_reface_docker
+   docker load -i mri_reface_docker_image
+   docker images
 ```
 
-폴더 내용 예시
-```
-mri_reface_docker/
-├─ mri_reface_docker_image
-└─ run_mri_reface_docker.sh   ← 중요
-```
+6. **스크립트 경로 복사** (나중에 사용):
+   - `mri_reface_docker` 폴더를 파일 탐색기에서 열기
+   - **상단 주소창 클릭** → 경로 자동 선택됨 → `Ctrl+C`로 복사
+   - 메모장에 붙여넣기: `C:\Users\YourName\Documents\mri_reface_docker\run_mri_reface_docker.sh`
+
 
 <details>
 <summary><b>Mac 사용자</b></summary>
